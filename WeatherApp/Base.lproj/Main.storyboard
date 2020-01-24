@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -19,23 +19,42 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="DF9-3E-ocT">
+                                <rect key="frame" x="32" y="418" width="350" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G1M-fd-5wn">
+                                <rect key="frame" x="74" y="486" width="266.5" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="axR-VD-vB6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1d2-l6-7Lw"/>
+                            <constraint firstItem="G1M-fd-5wn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3J3-WU-uiJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DF9-3E-ocT" secondAttribute="trailing" constant="32" id="EQb-gg-jPd"/>
                             <constraint firstItem="axR-VD-vB6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Ebw-Tr-Qwd"/>
                             <constraint firstItem="axR-VD-vB6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Gws-ip-xZd"/>
                             <constraint firstItem="axR-VD-vB6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Kn2-ar-YsH"/>
                             <constraint firstItem="axR-VD-vB6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Nl2-gW-6qa"/>
                             <constraint firstItem="axR-VD-vB6" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Qwu-6M-yPL"/>
+                            <constraint firstItem="DF9-3E-ocT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bdl-0b-aiZ"/>
                             <constraint firstItem="axR-VD-vB6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="kx8-AX-xcs"/>
+                            <constraint firstItem="G1M-fd-5wn" firstAttribute="top" secondItem="DF9-3E-ocT" secondAttribute="bottom" constant="8" id="nr4-5i-PUc"/>
                             <constraint firstAttribute="trailing" secondItem="axR-VD-vB6" secondAttribute="trailing" symbolic="YES" id="uNK-L5-X2e"/>
                             <constraint firstItem="axR-VD-vB6" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="yUZ-30-YwM"/>
+                            <constraint firstItem="DF9-3E-ocT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="yZf-RS-fGG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="cityLabel" destination="DF9-3E-ocT" id="uAC-86-ZF0"/>
                         <outlet property="searchBar" destination="axR-VD-vB6" id="ThK-eM-Yq7"/>
+                        <outlet property="temperatureLabel" destination="G1M-fd-5wn" id="Cht-N7-plL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
